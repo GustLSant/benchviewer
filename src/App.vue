@@ -1,6 +1,7 @@
 <script setup lang="ts">
   import { ref } from 'vue';
   import type { Benchmark } from './types';
+  import GraphViewer from './components/GraphViewer.vue';
 
   const benchmarks = ref<Benchmark[]>([]);
   const selectedFile = ref<File | null>(null);
@@ -71,6 +72,10 @@
         {{ b.algorithm }} - {{ b.cpu }} - {{ b.performance.cpuTime }}s
       </li>
     </ul>
+  </div>
+  
+  <div>
+    <GraphViewer v-for="(b, idx) in benchmarks" :key="idx" :benchmarkData="b" />
   </div>
 </template>
 
