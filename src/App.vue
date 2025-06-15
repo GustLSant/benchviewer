@@ -21,7 +21,6 @@
 
   const confirmUpload = () => {
     if (!selectedFile.value) {
-      alert('Nenhum arquivo selecionado.');
       return;
     }
 
@@ -55,51 +54,27 @@
 
 
 <template>
-  <!-- Input file com label dinâmico -->
-  <div class="">
-    <label>
+  <div class="flex gap-2">
+    <label class="flex items-center text-sm px-4 rounded-sm bg-neutral-700 hover:cursor-pointer hover:underline">
       {{ fileLabel }}
       <input type="file" accept=".json" @change="handleFileSelection" style="display: none" />
     </label>
-    <!-- Botão para confirmar o upload -->
-    <button @click="confirmUpload" :disabled="!selectedFile">Confirmar Upload</button>
+    <button @click="confirmUpload" :class="(selectedFile) ? 'enabled': 'disabled'">
+      {{ (selectedFile) ? 'Carregar Arquivo': 'Nenhum Arquivo Selecionado' }}
+    </button>
   </div>
 
-  <!-- Lista dos Benchmarks carregados -->
-  <h3>Benchmarks carregados:</h3>
-  <ul>
-    <li v-for="(b, index) in benchmarks" :key="index">
-      {{ b.algorithm }} - {{ b.cpu }} - {{ b.performance.cpuTime }}s
-    </li>
-  </ul>
+  <div class="flex flex-col gap-2 items-center">
+    <h3>Benchmarks carregados:</h3>
+    <ul>
+      <li v-for="(b, index) in benchmarks" :key="index">
+        {{ b.algorithm }} - {{ b.cpu }} - {{ b.performance.cpuTime }}s
+      </li>
+    </ul>
+  </div>
 </template>
 
 
 <style>
-  #app{
-    min-height: 100vh;
-  }
 
-  label {
-    display: inline-block;
-    padding: 8px 12px;
-    background-color: #eee;
-    cursor: pointer;
-    border-radius: 4px;
-    margin-right: 10px;
-  }
-
-  button {
-    padding: 8px 12px;
-    border: none;
-    background-color: #4CAF50;
-    color: white;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-
-  button:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
-  }
 </style>
