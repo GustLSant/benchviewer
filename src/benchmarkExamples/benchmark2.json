@@ -1,0 +1,17 @@
+{
+    "algorithm": "MergeSort",
+    "device": "Laptop",
+    "cpu": "AMD Ryzen 5 4600H",
+    "cpuClockSpeed": 3000,
+    "cpuThreadsCount": 12,
+    "memory": "16GB DDR4",
+    "memoryDdr": 4,
+    "performance": {
+      "cpuTime": 1.75,
+      "totalTime": 2.00,
+      "cpuMaxUsage": 88.7,
+      "cpuAverageUsage": 70.2,
+      "memoryMaxUsage": 1200,
+      "memoryAverageUsage": 950
+    }
+}

@@ -1,0 +1,17 @@
+{
+    "algorithm": "QuickSort",
+    "device": "Desktop",
+    "cpu": "Intel Core i7-9700K",
+    "cpuClockSpeed": 3600,
+    "cpuThreadsCount": 8,
+    "memory": "16GB DDR4",
+    "memoryDdr": 4,
+    "performance": {
+      "cpuTime": 1.25,
+      "totalTime": 1.50,
+      "cpuMaxUsage": 92.5,
+      "cpuAverageUsage": 75.3,
+      "memoryMaxUsage": 1350,
+      "memoryAverageUsage": 1100
+    }
+}
