@@ -4,7 +4,7 @@
   import GraphViewer from './components/GraphViewer.vue';
 
   const benchmarks = ref<Benchmark[]>([]); // lista completa dos benchmarks
-  const groupedBenchmarks = ref<GroupedBenchmarks>({}); // lista dos benchmarks agrupados por cada algoritmo
+  const benchmarksGroupedByAlgorithm = ref<GroupedBenchmarks>({}); // lista dos benchmarks agrupados por cada algoritmo
   
   const selectedFile = ref<File | null>(null);
 
@@ -39,7 +39,6 @@
           updateGroupedBenchmarks();
         }
 
-        console.log('Benchmarks adicionados:', benchmarks.value);
         selectedFile.value = null; // Resetar seleção após upload
       }
       catch (error) {
@@ -54,11 +53,11 @@
 
   const updateGroupedBenchmarks = () => {
     benchmarks.value.forEach(benchmark => {
-      if(benchmark.algorithm in groupedBenchmarks.value){ // esse algoritmo ja existe no groupedBenchmarks
-        groupedBenchmarks.value[benchmark.algorithm].push(benchmark);
+      if(benchmark.algorithm in benchmarksGroupedByAlgorithm.value){ // esse algoritmo ja existe no groupedBenchmarks
+        benchmarksGroupedByAlgorithm.value[benchmark.algorithm].push(benchmark);
       }
       else{
-        groupedBenchmarks.value[benchmark.algorithm] = [benchmark];
+        benchmarksGroupedByAlgorithm.value[benchmark.algorithm] = [benchmark];
       }
     });
   }
@@ -87,10 +86,10 @@
   </div>
   
   <div>
-    <GraphViewer v-for="(b, idx) in benchmarks" :key="idx" :benchmarkData="b" />
+    <GraphViewer v-if="Object.keys(benchmarksGroupedByAlgorithm).length > 0" :benchmarks="benchmarks" />
   </div>
 
-  <p @click="console.log(groupedBenchmarks)">print grouped benchmarks</p>
+  <p @click="console.log(benchmarksGroupedByAlgorithm)">print grouped benchmarks</p>
 </template>
 
 
