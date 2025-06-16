@@ -17,3 +17,8 @@ export type BenchmarkPerformanceData = {
     memoryMaxUsage: number,
     memoryAverageUsage: number,
 }
+
+
+export type GroupedBenchmarks = {
+  [algorithmName: string]: Benchmark[];
+};

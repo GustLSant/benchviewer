@@ -1,0 +1,155 @@
+[
+    {
+        "algorithm": "QuickSort",
+        "device": "Desktop",
+        "cpu": "Intel Core i7-9700K",
+        "cpuClockSpeed": 3600,
+        "cpuThreadsCount": 8,
+        "memory": "16GB DDR4",
+        "memoryDdr": 4,
+        "performance": {
+            "cpuTime": 1.25,
+            "totalTime": 1.50,
+            "cpuMaxUsage": 92.5,
+            "cpuAverageUsage": 75.3,
+            "memoryMaxUsage": 1350,
+            "memoryAverageUsage": 1100
+        }
+    },
+    {
+        "algorithm": "MergeSort",
+        "device": "Laptop",
+        "cpu": "AMD Ryzen 5 4600H",
+        "cpuClockSpeed": 3000,
+        "cpuThreadsCount": 12,
+        "memory": "16GB DDR4",
+        "memoryDdr": 4,
+        "performance": {
+            "cpuTime": 1.75,
+            "totalTime": 2.00,
+            "cpuMaxUsage": 88.7,
+            "cpuAverageUsage": 70.2,
+            "memoryMaxUsage": 1200,
+            "memoryAverageUsage": 950
+        }
+    },
+    {
+        "algorithm": "BubbleSort",
+        "device": "Mobile",
+        "cpu": "Qualcomm Snapdragon 888",
+        "cpuClockSpeed": 2840,
+        "cpuThreadsCount": 8,
+        "memory": "8GB LPDDR5",
+        "memoryDdr": 5,
+        "performance": {
+            "cpuTime": 5.40,
+            "totalTime": 5.80,
+            "cpuMaxUsage": 98.0,
+            "cpuAverageUsage": 85.0,
+            "memoryMaxUsage": 600,
+            "memoryAverageUsage": 480
+        }
+    },
+    {
+        "algorithm": "Dijkstra",
+        "device": "Embedded",
+        "cpu": "ARM Cortex-A53",
+        "cpuClockSpeed": 1200,
+        "cpuThreadsCount": 4,
+        "memory": "1GB LPDDR3",
+        "memoryDdr": 3,
+        "performance": {
+            "cpuTime": 8.20,
+            "totalTime": 9.00,
+            "cpuMaxUsage": 89.1,
+            "cpuAverageUsage": 72.6,
+            "memoryMaxUsage": 150,
+            "memoryAverageUsage": 110
+        }
+    },
+    {
+        "algorithm": "AES Encryption",
+        "device": "Desktop",
+        "cpu": "Intel Core i5-12600K",
+        "cpuClockSpeed": 3900,
+        "cpuThreadsCount": 16,
+        "memory": "32GB DDR5",
+        "memoryDdr": 5,
+        "performance": {
+            "cpuTime": 0.85,
+            "totalTime": 1.10,
+            "cpuMaxUsage": 81.5,
+            "cpuAverageUsage": 67.0,
+            "memoryMaxUsage": 900,
+            "memoryAverageUsage": 700
+        }
+    },
+    {
+        "algorithm": "QuickSort",
+        "device": "Embedded",
+        "cpu": "ARM Cortex-M7",
+        "cpuClockSpeed": 600,
+        "cpuThreadsCount": 1,
+        "memory": "512MB SDRAM",
+        "memoryDdr": 2,
+        "performance": {
+            "cpuTime": 15.30,
+            "totalTime": 16.00,
+            "cpuMaxUsage": 99.0,
+            "cpuAverageUsage": 94.2,
+            "memoryMaxUsage": 80,
+            "memoryAverageUsage": 65
+        }
+    },
+    {
+        "algorithm": "MergeSort",
+        "device": "Mobile",
+        "cpu": "Apple A16 Bionic",
+        "cpuClockSpeed": 3450,
+        "cpuThreadsCount": 6,
+        "memory": "6GB LPDDR5",
+        "memoryDdr": 5,
+        "performance": {
+            "cpuTime": 2.30,
+            "totalTime": 2.60,
+            "cpuMaxUsage": 90.3,
+            "cpuAverageUsage": 76.9,
+            "memoryMaxUsage": 750,
+            "memoryAverageUsage": 620
+        }
+    },
+    {
+        "algorithm": "Dijkstra",
+        "device": "Laptop",
+        "cpu": "Intel Core i5-1135G7",
+        "cpuClockSpeed": 2400,
+        "cpuThreadsCount": 8,
+        "memory": "8GB DDR4",
+        "memoryDdr": 4,
+        "performance": {
+            "cpuTime": 4.10,
+            "totalTime": 4.35,
+            "cpuMaxUsage": 87.6,
+            "cpuAverageUsage": 69.0,
+            "memoryMaxUsage": 700,
+            "memoryAverageUsage": 560
+        }
+    },
+    {
+        "algorithm": "AES Encryption",
+        "device": "Mobile",
+        "cpu": "Samsung Exynos 2100",
+        "cpuClockSpeed": 2900,
+        "cpuThreadsCount": 8,
+        "memory": "12GB LPDDR5",
+        "memoryDdr": 5,
+        "performance": {
+            "cpuTime": 1.15,
+            "totalTime": 1.45,
+            "cpuMaxUsage": 85.7,
+            "cpuAverageUsage": 71.4,
+            "memoryMaxUsage": 830,
+            "memoryAverageUsage": 710
+        }
+    }
+]
