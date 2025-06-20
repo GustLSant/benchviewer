@@ -1,11 +1,9 @@
 <script setup lang="ts">
   import { ref } from 'vue';
-  import type { Benchmark, GroupedBenchmarks } from './types';
+  import type { Benchmark, BenchmarkGroupedByAlgorithm } from './types';
   import GraphViewer from './components/GraphViewer.vue';
 
-  const benchmarks = ref<Benchmark[]>([]); // lista completa dos benchmarks
-  const benchmarksGroupedByAlgorithm = ref<GroupedBenchmarks>({}); // lista dos benchmarks agrupados por cada algoritmo
-  
+  const benchmarks = ref<Benchmark[]>([]); // lista completa dos benchmarks  
   const selectedFile = ref<File | null>(null);
 
 
@@ -30,14 +28,8 @@
       try {
         const json = JSON.parse(reader.result as string);
 
-        if (Array.isArray(json)) {
-          json.forEach(item => benchmarks.value.push(item as Benchmark));
-          updateGroupedBenchmarks();
-        }
-        else {
-          benchmarks.value.push(json as Benchmark);
-          updateGroupedBenchmarks();
-        }
+        if (Array.isArray(json)) { json.forEach(item => benchmarks.value.push(item as Benchmark)); }
+        else { benchmarks.value.push(json as Benchmark); }
 
         selectedFile.value = null; // Resetar seleção após upload
       }
@@ -51,21 +43,32 @@
   };
 
 
-  const updateGroupedBenchmarks = () => {
+  function getBenchmarksGroupedByAlgorithm(): BenchmarkGroupedByAlgorithm[] {
+    const groupedBenchmarks: BenchmarkGroupedByAlgorithm[] = [];
+
     benchmarks.value.forEach(benchmark => {
-      if(benchmark.algorithm in benchmarksGroupedByAlgorithm.value){ // esse algoritmo ja existe no groupedBenchmarks
-        benchmarksGroupedByAlgorithm.value[benchmark.algorithm].push(benchmark);
+      const idx: number = groupedBenchmarks.findIndex((b: BenchmarkGroupedByAlgorithm) => b.algorithm === benchmark.algorithm);
+      
+      if(idx !== -1){ // esse algoritmo ja existe no groupedBenchmarks (entao so adiciona na lista de benchmarks)
+        groupedBenchmarks[idx].benchmarks.push(benchmark);
       }
-      else{
-        benchmarksGroupedByAlgorithm.value[benchmark.algorithm] = [benchmark];
+      else{ // esse algoritmo nao existe no groupedBenchmarks (entao cria um novo objeto do tipo BenchmarkGroupedByAlgorithm e adiciona no array)
+        groupedBenchmarks.push(
+          {
+            algorithm: benchmark.algorithm,
+            benchmarks: [benchmark]
+          }
+        )
       }
     });
+
+    return groupedBenchmarks;
   }
 </script>
 
 
 <template>
-  <div class="flex gap-2">
+  <section class="flex justify-center gap-2">
     <label class="flex items-center text-sm px-4 rounded-sm bg-neutral-700 hover:cursor-pointer hover:underline">
       {{ (selectedFile !== null) ? selectedFile.name : "Escolher arquivo JSON" }}
       <input type="file" accept=".json" @change="handleFileSelection" style="display: none" />
@@ -74,22 +77,18 @@
     <button @click="confirmUpload" :class="(selectedFile) ? 'enabled': 'disabled'">
       {{ (selectedFile) ? 'Carregar Arquivo': 'Nenhum Arquivo Selecionado' }}
     </button>
-  </div>
+  </section>
 
-  <div class="flex flex-col gap-2 items-center">
+  <section class="flex flex-col gap-2 items-center">
     <h3>Benchmarks carregados:</h3>
-    <ul>
+    <ul class="list-disc">
       <li v-for="(b, index) in benchmarks" :key="index">
         {{ b.algorithm }} - {{ b.cpu }} - {{ b.performance.cpuTime }}s
       </li>
     </ul>
-  </div>
+  </section>
   
-  <div>
-    <GraphViewer v-if="Object.keys(benchmarksGroupedByAlgorithm).length > 0" :benchmarks="benchmarks" />
-  </div>
-
-  <p @click="console.log(benchmarksGroupedByAlgorithm)">print grouped benchmarks</p>
+  <GraphViewer v-if="Object.keys(benchmarks).length > 0" :groupedBenchmarks="getBenchmarksGroupedByAlgorithm()" />
 </template>
 
 
