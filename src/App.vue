@@ -64,6 +64,11 @@
 
     return groupedBenchmarks;
   }
+
+
+  const handleDeleteAllBenchmarks = () => {
+    benchmarks.value = [];
+  }
 </script>
 
 
@@ -77,6 +82,8 @@
     <button @click="confirmUpload" :class="(selectedFile) ? 'enabled': 'disabled'">
       {{ (selectedFile) ? 'Carregar Arquivo': 'Nenhum Arquivo Selecionado' }}
     </button>
+
+    <button @click="handleDeleteAllBenchmarks" v-if="benchmarks.length > 0">Apagar todos os benchmarks carregados</button>
   </section>
 
   <section class="flex flex-col gap-2 items-center">
