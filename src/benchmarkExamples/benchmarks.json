@@ -17,74 +17,6 @@
         }
     },
     {
-        "algorithm": "MergeSort",
-        "device": "Laptop",
-        "cpu": "AMD Ryzen 5 4600H",
-        "cpuClockSpeed": 3000,
-        "cpuThreadsCount": 12,
-        "memory": "16GB DDR4",
-        "memoryDdr": 4,
-        "performance": {
-            "cpuTime": 1.75,
-            "totalTime": 2.00,
-            "cpuMaxUsage": 88.7,
-            "cpuAverageUsage": 70.2,
-            "memoryMaxUsage": 1200,
-            "memoryAverageUsage": 950
-        }
-    },
-    {
-        "algorithm": "BubbleSort",
-        "device": "Mobile",
-        "cpu": "Qualcomm Snapdragon 888",
-        "cpuClockSpeed": 2840,
-        "cpuThreadsCount": 8,
-        "memory": "8GB LPDDR5",
-        "memoryDdr": 5,
-        "performance": {
-            "cpuTime": 5.40,
-            "totalTime": 5.80,
-            "cpuMaxUsage": 98.0,
-            "cpuAverageUsage": 85.0,
-            "memoryMaxUsage": 600,
-            "memoryAverageUsage": 480
-        }
-    },
-    {
-        "algorithm": "Dijkstra",
-        "device": "Embedded",
-        "cpu": "ARM Cortex-A53",
-        "cpuClockSpeed": 1200,
-        "cpuThreadsCount": 4,
-        "memory": "1GB LPDDR3",
-        "memoryDdr": 3,
-        "performance": {
-            "cpuTime": 8.20,
-            "totalTime": 9.00,
-            "cpuMaxUsage": 89.1,
-            "cpuAverageUsage": 72.6,
-            "memoryMaxUsage": 150,
-            "memoryAverageUsage": 110
-        }
-    },
-    {
-        "algorithm": "AES Encryption",
-        "device": "Desktop",
-        "cpu": "Intel Core i5-12600K",
-        "cpuClockSpeed": 3900,
-        "cpuThreadsCount": 16,
-        "memory": "32GB DDR5",
-        "memoryDdr": 5,
-        "performance": {
-            "cpuTime": 0.85,
-            "totalTime": 1.10,
-            "cpuMaxUsage": 81.5,
-            "cpuAverageUsage": 67.0,
-            "memoryMaxUsage": 900,
-            "memoryAverageUsage": 700
-        }
-    },
-    {
         "algorithm": "QuickSort",
         "device": "Embedded",
         "cpu": "ARM Cortex-M7",
@@ -99,6 +31,40 @@
             "cpuAverageUsage": 94.2,
             "memoryMaxUsage": 80,
             "memoryAverageUsage": 65
+        }
+    },
+    {
+        "algorithm": "QuickSort",
+        "device": "Laptop",
+        "cpu": "AMD Ryzen 7 5800H",
+        "cpuClockSpeed": 3200,
+        "cpuThreadsCount": 16,
+        "memory": "16GB DDR4",
+        "memoryDdr": 4,
+        "performance": {
+            "cpuTime": 1.60,
+            "totalTime": 1.90,
+            "cpuMaxUsage": 89.4,
+            "cpuAverageUsage": 73.8,
+            "memoryMaxUsage": 1250,
+            "memoryAverageUsage": 1000
+        }
+    },
+    {
+        "algorithm": "MergeSort",
+        "device": "Laptop",
+        "cpu": "AMD Ryzen 5 4600H",
+        "cpuClockSpeed": 3000,
+        "cpuThreadsCount": 12,
+        "memory": "16GB DDR4",
+        "memoryDdr": 4,
+        "performance": {
+            "cpuTime": 1.75,
+            "totalTime": 2.00,
+            "cpuMaxUsage": 88.7,
+            "cpuAverageUsage": 70.2,
+            "memoryMaxUsage": 1200,
+            "memoryAverageUsage": 950
         }
     },
     {
@@ -119,6 +85,91 @@
         }
     },
     {
+        "algorithm": "MergeSort",
+        "device": "Desktop",
+        "cpu": "Intel Core i9-11900K",
+        "cpuClockSpeed": 3500,
+        "cpuThreadsCount": 16,
+        "memory": "32GB DDR4",
+        "memoryDdr": 4,
+        "performance": {
+            "cpuTime": 1.20,
+            "totalTime": 1.50,
+            "cpuMaxUsage": 85.0,
+            "cpuAverageUsage": 68.5,
+            "memoryMaxUsage": 1400,
+            "memoryAverageUsage": 1100
+        }
+    },
+    {
+        "algorithm": "BubbleSort",
+        "device": "Mobile",
+        "cpu": "Qualcomm Snapdragon 888",
+        "cpuClockSpeed": 2840,
+        "cpuThreadsCount": 8,
+        "memory": "8GB LPDDR5",
+        "memoryDdr": 5,
+        "performance": {
+            "cpuTime": 5.40,
+            "totalTime": 5.80,
+            "cpuMaxUsage": 98.0,
+            "cpuAverageUsage": 85.0,
+            "memoryMaxUsage": 600,
+            "memoryAverageUsage": 480
+        }
+    },
+    {
+        "algorithm": "BubbleSort",
+        "device": "Laptop",
+        "cpu": "Intel Core i5-1135G7",
+        "cpuClockSpeed": 2400,
+        "cpuThreadsCount": 8,
+        "memory": "8GB DDR4",
+        "memoryDdr": 4,
+        "performance": {
+            "cpuTime": 6.20,
+            "totalTime": 6.60,
+            "cpuMaxUsage": 90.2,
+            "cpuAverageUsage": 72.0,
+            "memoryMaxUsage": 700,
+            "memoryAverageUsage": 560
+        }
+    },
+    {
+        "algorithm": "BubbleSort",
+        "device": "Embedded",
+        "cpu": "ARM Cortex-A53",
+        "cpuClockSpeed": 1200,
+        "cpuThreadsCount": 4,
+        "memory": "1GB LPDDR3",
+        "memoryDdr": 3,
+        "performance": {
+            "cpuTime": 10.50,
+            "totalTime": 11.00,
+            "cpuMaxUsage": 88.0,
+            "cpuAverageUsage": 70.0,
+            "memoryMaxUsage": 160,
+            "memoryAverageUsage": 120
+        }
+    },
+    {
+        "algorithm": "Dijkstra",
+        "device": "Embedded",
+        "cpu": "ARM Cortex-A53",
+        "cpuClockSpeed": 1200,
+        "cpuThreadsCount": 4,
+        "memory": "1GB LPDDR3",
+        "memoryDdr": 3,
+        "performance": {
+            "cpuTime": 8.20,
+            "totalTime": 9.00,
+            "cpuMaxUsage": 89.1,
+            "cpuAverageUsage": 72.6,
+            "memoryMaxUsage": 150,
+            "memoryAverageUsage": 110
+        }
+    },
+    {
         "algorithm": "Dijkstra",
         "device": "Laptop",
         "cpu": "Intel Core i5-1135G7",
@@ -136,6 +187,40 @@
         }
     },
     {
+        "algorithm": "Dijkstra",
+        "device": "Desktop",
+        "cpu": "AMD Ryzen 9 5900X",
+        "cpuClockSpeed": 3700,
+        "cpuThreadsCount": 24,
+        "memory": "32GB DDR4",
+        "memoryDdr": 4,
+        "performance": {
+            "cpuTime": 2.90,
+            "totalTime": 3.20,
+            "cpuMaxUsage": 91.3,
+            "cpuAverageUsage": 74.0,
+            "memoryMaxUsage": 1000,
+            "memoryAverageUsage": 800
+        }
+    },
+    {
+        "algorithm": "AES Encryption",
+        "device": "Desktop",
+        "cpu": "Intel Core i5-12600K",
+        "cpuClockSpeed": 3900,
+        "cpuThreadsCount": 16,
+        "memory": "32GB DDR5",
+        "memoryDdr": 5,
+        "performance": {
+            "cpuTime": 0.85,
+            "totalTime": 1.10,
+            "cpuMaxUsage": 81.5,
+            "cpuAverageUsage": 67.0,
+            "memoryMaxUsage": 900,
+            "memoryAverageUsage": 700
+        }
+    },
+    {
         "algorithm": "AES Encryption",
         "device": "Mobile",
         "cpu": "Samsung Exynos 2100",
@@ -150,6 +235,23 @@
             "cpuAverageUsage": 71.4,
             "memoryMaxUsage": 830,
             "memoryAverageUsage": 710
+        }
+    },
+    {
+        "algorithm": "AES Encryption",
+        "device": "Laptop",
+        "cpu": "AMD Ryzen 5 5600U",
+        "cpuClockSpeed": 2300,
+        "cpuThreadsCount": 12,
+        "memory": "16GB DDR4",
+        "memoryDdr": 4,
+        "performance": {
+            "cpuTime": 1.05,
+            "totalTime": 1.30,
+            "cpuMaxUsage": 82.0,
+            "cpuAverageUsage": 68.2,
+            "memoryMaxUsage": 850,
+            "memoryAverageUsage": 720
         }
     }
 ]
